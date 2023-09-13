@@ -24,7 +24,7 @@ function App() {
   return (
     <Router>
 
-    <div className="App" basename='/admin_suvat_progress'>
+    <div className="App" >
   
       <Routes>
         
