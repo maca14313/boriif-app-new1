@@ -20,7 +20,7 @@ function App() {
   // git remote add origin https://github.com/maca14313/suvat_progress.git
   // git remote add origin https://github.com/maca14313/admin_suvat_progress.git
     //"homepage": "https://maca14313.github.io/admin_suvat_progress",
-
+// git commit -m "first commit24"  git push -u origin main  npm run deploy
   const [routerAuth,setRouterAuth]=useState(true)
 
   return (
