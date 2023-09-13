@@ -134,7 +134,7 @@ function ListOfPhoneNumber() {
              <h3 className='titleOfProfile' style={{display:regNumber==true?'':'none' }}><h6>List of registerd numbers</h6> <span className='membersLength'>{membersInfoReg.length}</span> </h3> 
 
               
-    {membersInfoReg.map((m,index)=>(
+    {membersInfoReg?.map((m,index)=>(
       
 
   <>

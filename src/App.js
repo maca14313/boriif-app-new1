@@ -17,16 +17,14 @@ import LogInMember from 'compenent/reg/LogInMember';
 
 function App() {
 
-  // for admin git remote add origin https://github.com/maca14313/nameApp1.git
-  // git remote add origin https://github.com/maca14313/suvat_progress.git
-  // git remote add origin https://github.com/maca14313/admin_suvat_progress.git
+  
 
   const [routerAuth,setRouterAuth]=useState(true)
 
   return (
-    <Router basename='/admin_suvat_progress'>
+    <Router>
 
-    <div className="App">
+    <div className="App" basename='/suvat_progress'>
   
       <Routes>
         
