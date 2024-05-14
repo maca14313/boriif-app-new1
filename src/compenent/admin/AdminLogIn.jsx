@@ -14,10 +14,12 @@ function AdminLogIn() {
     const [regData,setRegData]=useState('');
     const registerMember=async(e)=>{
         e.preventDefault()
-                if (id=='4247tofa' && phoneNumber=='0931323035') {
+                if (id=='1234' && phoneNumber=='1234567890') {
                       localStorage.setItem('auth',JSON.stringify('okk'))
                       setRegData('loged in')
-                      navigate('/admin_edit')
+                      navigate('/adminhomepage')
+                      window.location.reload(true)
+
                      
                 } else {
                     console.log('false')
@@ -28,23 +30,24 @@ function AdminLogIn() {
                      }
     useEffect(() => {
      if (JSON.parse(localStorage.getItem('auth'))=='okk') {
-        navigate('/admin_edit')
+        navigate('/adminhomepage')
 
      }
 
-    },[])
+    },[regData])
 
   return (
-<div className='regCon'>
+<div className='regCon payment-page-info-list'>
 
-<form action="" className='formCon' onSubmit={registerMember}>
+<form action="" className='formCon payment-page-info-list' onSubmit={registerMember}>
+<h3 className='titleOfProfile margin-top20'>Admin`s log in page</h3>
 
-     <div > <span style={{color:regData=='loged in'?'green':'red'}}>{regData}</span> </div>
+     <div > <span style={{color:regData=='loged in'?'yellow':'red'}}>{regData}</span> </div>
 
-     <input className='row' type="text" onChange={(e)=>setId(e.target.value)} placeholder='id'  required/>
-     <input className='row' type="number" onChange={(e)=>setPhoneNumber(e.target.value)} placeholder='phone Number'  required/>
+     <input className='row payment-page-info-list' type="text" onChange={(e)=>setId(e.target.value)} placeholder='id'  required/>
+     <input className='row payment-page-info-list' type="number" onChange={(e)=>setPhoneNumber(e.target.value)} placeholder='phone Number'  required/>
  
-     <button className='row regBtn' type="submit">Log In</button>
+     <button className='row  regBtn' type="submit">Log In</button>
 
 
 

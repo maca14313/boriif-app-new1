@@ -32,44 +32,44 @@ function ListOfMembers() {
     
     },[])
 
-    const searchByName=async()=>{
-      try {
-        const searchMembers=await axios.get(`${hostVar}/membersdata/searchbyname/${searchText}`)
-         setMembersInfo(searchMembers.data)
+   
 
-      } catch (error) {
-        
-      }
-    }
+    useEffect(() => {
+     if (searchText!='') {
+      const search=async()=>{
+        try {
+          const searchMembers=await axios.get(`${hostVar}/membersdata/searchbyname/${searchText}`)
+           setMembersInfo(searchMembers.data)
+  
+        } catch (error) {
+          
+        }
+       }
+       search()
+     }
+    }, [searchText]);
 
-    const searchByPhoneNumber=async()=>{
-      try {
-        const searchMembers=await axios.get(`${hostVar}/membersdata/searchbyphonenumber/${searchText}`)
-         setMembersInfo(searchMembers.data)
 
-      } catch (error) {
-        
-      }
-    }
+
+   
         
   return auth=='okk'? (
-    <div className='regCon regConList'>
-       
+    <div className='regCon regConList payment-page-info-list'>
+         
           <h3 className='titleOfProfile'><h3>List Of Members</h3> <span className='membersLength'>{membersInfo?.length}</span> </h3> 
             
              <div className='formCon listOfMembersCon listOfMembersConSearch'>
-             <input className='row listCon' type="text" placeholder='type some ting' onChange={(e)=>setSearchText(e.target.value)} />
-            <div className="searchByCon"> <div>Search by :-</div> <div className='searchByBtn' onClick={searchByName}>Name</div> <div className='searchByBtn' onClick={searchByPhoneNumber}>Number</div></div>
+             <input className='row listCon payment-page-info-list ' type="text" placeholder='🔎  by name or phone number' onChange={(e)=>setSearchText(e.target.value)} />
              </div>
              
-             
-          {membersInfo.map((m,index)=>(
+             <div className='formCon formConUpdate regConDelete deleteMemberConPayment payment-page-info-list-item ' > <Link to={`/idcard`} className='deleteMemberConPaymentText payment-page-info-list'>Id-cards  ➡️</Link> </div>
+          {membersInfo.sort((a,b)=>b.id-a.id)?.map((m,index)=>(
 
       
        
-  <Link to={`/adminupdatemember/${m.phone_number}`} key={m?.id}>
-     <div  className='formCon listOfMembersCon' >
-       <div className='row listCon' ><div><span className='spanOfList'><div className='margin_right10' style={{color:'#1aadca'}}>{index+1}</div>{m?.name}  <span className='margin_left10'>{m.father_name}</span> </span> </div> <span>{m?.phone_number}</span>   </div>    
+  <Link to={`/adminupdatemember/${m.personal_id}`} key={m?.id}>
+     <div  className='formCon listOfMembersCon payment-page-info-list' >
+       <div className='row listCon payment-page-info-list payment-page-info-list-border-none' ><div><span className='spanOfList payment-page-info-list'><div className='margin_right10' style={{color:'#00c8ff'}}>{index+1}</div>{m?.name}  <span className='margin_left10'>{m.father_name}</span> </span> </div> <span>{m?.phone_number}</span>   </div>    
         
 
     </div>

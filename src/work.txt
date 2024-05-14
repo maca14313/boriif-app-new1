@@ -1,0 +1,5 @@
+post
+size  of text
+update page loading
+log in page loading
+if a person deleted the total amount result will be not true for the org

@@ -1,0 +1,361 @@
+.homeCon{
+    position: relative;
+}
+.welcomPage{
+    min-width:100vw;
+    max-width:100vw ;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+font-family: "Roboto", sans-serif;
+position: relative;
+   
+}
+
+.navCon{
+    min-width:100vw;
+    max-width:100vw ;
+    min-height: 80px;
+    max-height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    background-color: white;
+    box-shadow: 1px 1px 10px gray;
+}
+.navLogo{
+    flex: 1;
+    color: #00c8ff;
+    color: #0192ba;
+    color: black;
+    font-size: 25px;
+    font-weight: 900;
+    margin-left: 15px;
+    padding-left: 20px;
+
+
+}
+.navLinksConMiddle{
+    flex: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.navLinksConMiddleItem{
+  color: black;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 10px 10px;
+  margin-left: 20px;
+  color: #8019c8;
+  color: black;
+  
+}
+
+.navLinksCon{
+    flex: 1;
+    display: flex;
+    justify-content:flex-end;
+    align-items: center;
+    margin-right: 10px;
+}
+.navLink{
+    color: white;
+    padding: 5px 10px;
+    margin: 5px;
+    border-radius: 7px;
+    font-weight: 800;
+    font-size: 12px;
+    background-color: black;
+    
+
+}
+
+
+@media screen and (max-width:970px) {
+    .navLogo{
+        min-width: 100%;
+        max-width: 100%;
+        text-align: center;
+        margin-left: 0px;
+        position: relative;
+
+    }
+    .navConOpener{
+        top: 0px;
+        left: 10px;
+         position: absolute;
+         min-height: 30px;
+         max-height: 30px;
+         min-width: 30px;
+         max-width: 30px;
+         display: flex;
+         flex-direction: column;
+         justify-content: space-around;
+         align-items: center;
+         padding: 2px;
+         z-index: 2;
+     }
+     .navConOpenerLine{
+         min-height: 3px;
+         max-height: 3px;
+         min-width: 100%;
+         max-width: 100%;
+         background-color: #00c8ff;
+ 
+     }
+     .navConMCloser{
+        border: 0.5px solid hsl(193, 65%, 75%);
+        font-size: 18px;
+        font-weight: 900;
+        min-height: 30px;
+         max-height: 30px;
+         min-width: 30px;
+         max-width: 30px;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         margin: 10px 20px;
+         color: red;
+     }
+     .navConMCloser:active{
+        min-height: 35px;
+         max-height: 35px;
+         min-width: 35px;
+         max-width: 35px;
+         background-color: lightgray;
+     }
+     .navCon{
+        min-height: 50px;
+         max-height: 50px;
+         justify-content: flex-start;
+     }
+     
+     .navLinksConMiddle{
+         display: none;
+     }
+     .navLinksCon{
+        display: none;
+     }
+
+    .navConM{
+        flex-direction: column;
+        align-items: center;
+        justify-content:flex-start;
+        min-height: 100vh;
+        max-height: 100vh;
+        background-color: rgba(211, 211, 211, 0.877);
+        background-color: white;
+        position:fixed;
+        top: 0px;
+        z-index: 10;
+       
+
+    }
+
+   
+    .navLogoM{
+        margin-top: 10px;
+        margin-left: 0px;
+        font-size: 30px;
+        font-weight: 900;
+        color: #0192ba;
+        text-align: center;
+        flex: 0;
+        min-height: max-content;
+        max-height: max-content;
+        min-width: 100vw;
+        max-width: 100vw;
+    }
+    .navLinksConMiddleM{
+ min-width: 100vw;
+ max-width: 100vw;
+ flex: 0;
+ min-height: max-content;
+ max-height: max-content;
+ overflow-x: scroll;
+ display: flex;
+ flex-direction: column;
+ justify-content: flex-start;
+ 
+    }
+    .navLinksConMiddleItemM{
+     font-size: 16px;
+     white-space: nowrap;
+     margin-left: 10px;
+     padding-left: 10px;
+     font-weight: 400;
+     min-height: 45px;
+     max-height: 45px;
+     min-width: 85%;
+     max-width: 85%;
+     display: flex;
+     align-items: center;
+     border-bottom: 0.5px solid #68b0c3;
+
+
+
+    }
+
+    .navLinksConM{
+        display: flex;
+        flex-direction: column;
+        flex: 0;
+        min-width:100vw;
+        max-width:100vw ;
+        min-height: max-content;
+        max-height: max-content;
+
+    }
+    .navLinkM{
+       color: black;
+    margin-left: 10px;
+    padding-left: 10px;
+    font-weight: 800;
+    font-size: 16px;
+    min-height: 45px;
+    max-height: 45px;
+    min-width: 85%;
+    max-width: 85%;
+    display: flex;
+    align-items: center;
+    border-bottom: 0.5px solid #68b0c3;
+    color: #8019c8;
+
+    }
+}
+
+
+
+@media screen and (min-width:971px) {
+   
+    .navConMCloser{
+        display: none;
+    }
+    .navLinksConMiddleM{
+        display:none;
+    }
+}
+
+.introCon{
+    min-width:100vw;
+    max-width:100vw ;
+    min-height: 84vh;
+    max-height: 84vh;
+    display: flex;
+
+}
+
+.introConIntro{
+    min-width:50vw;
+    max-width:50vw ;
+    min-height: 84vh;
+    max-height: 84vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-break: auto;
+
+
+}
+.introConIntroText{
+    text-wrap:balance;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 600;
+    padding: 15px;
+    color: #02b0e0;
+    color: #0192ba;
+
+
+
+}
+
+.introConImgCon{
+    min-width:50vw;
+    max-width:50vw ;
+    min-height: 84vh;
+    max-height: 84vh;
+    background-image: url('./Screen\ Shot\ 2023-09-03\ at\ 10.32.34\ PM.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:contain;
+
+}
+
+@media screen and (max-width:600px) {
+    .introCon{
+        margin-top: 20px;
+        flex-direction: column;
+        min-height: max-content;
+        max-height: max-content;
+    }
+    .introConIntro{
+        min-height: max-content;
+        max-height: max-content;
+        min-width:99vw;
+        max-width:99vw ;
+    }
+    .introConImgCon{
+        min-height: 350px;
+        max-height:350px;
+        min-width:100
+        
+        vw;
+        max-width:100vw ;
+        margin: 10px;
+    }
+    .introConIntroText{
+        font-size: 20px;
+    }
+}
+
+/******************************************************************/
+
+.aboutCon{
+    margin-top: 10px;
+    min-height: max-content;
+    max-height: max-content;
+    min-width:99vw;
+    max-width:99vw;
+    background-color: #C8FF00;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.aboutConSub{
+    min-height: 550px;
+    max-height: 550px;
+    min-width:40%;
+    max-width:40%;
+    padding: 30px;
+    margin: 15px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px lightgrey;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.aboutConSubTitle{
+    margin: 15px 0px;
+    color: #0192ba;
+}
+.aboutConSubTitleText{
+ font-size: 16px;
+ font-weight: 100;
+ line-height: 1.5;
+}
+
+@media screen and (max-width:900px) {
+    .aboutCon{
+        flex-direction: column;
+    }
+    .aboutConSub{
+        min-height: max-content;
+        max-height: max-content;
+        min-width:90%;
+        max-width:90%;
+    }
+}
